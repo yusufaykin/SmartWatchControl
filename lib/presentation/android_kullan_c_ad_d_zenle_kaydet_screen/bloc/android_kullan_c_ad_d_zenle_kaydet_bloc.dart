@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:smart_watch_control/presentation/android_kullan_c_ad_d_zenle_kaydet_screen/models/android_kullan_c_ad_d_zenle_kaydet_model.dart';part 'android_kullan_c_ad_d_zenle_kaydet_event.dart';part 'android_kullan_c_ad_d_zenle_kaydet_state.dart';/// A bloc that manages the state of a AndroidKullanCAdDZenleKaydet according to the event that is dispatched to it.
+class AndroidKullanCAdDZenleKaydetBloc extends Bloc<AndroidKullanCAdDZenleKaydetEvent, AndroidKullanCAdDZenleKaydetState> {AndroidKullanCAdDZenleKaydetBloc(AndroidKullanCAdDZenleKaydetState initialState) : super(initialState) { on<AndroidKullanCAdDZenleKaydetInitialEvent>(_onInitialize); }
+
+_onInitialize(AndroidKullanCAdDZenleKaydetInitialEvent event, Emitter<AndroidKullanCAdDZenleKaydetState> emit, ) async  { emit(state.copyWith(enterOldUsernameController: TextEditingController(), newUsernameController: TextEditingController())); } 
+ }

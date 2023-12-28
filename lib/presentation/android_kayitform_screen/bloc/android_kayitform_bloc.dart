@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:smart_watch_control/presentation/android_kayitform_screen/models/android_kayitform_model.dart';part 'android_kayitform_event.dart';part 'android_kayitform_state.dart';/// A bloc that manages the state of a AndroidKayitform according to the event that is dispatched to it.
+class AndroidKayitformBloc extends Bloc<AndroidKayitformEvent, AndroidKayitformState> {AndroidKayitformBloc(AndroidKayitformState initialState) : super(initialState) { on<AndroidKayitformInitialEvent>(_onInitialize); }
+
+_onInitialize(AndroidKayitformInitialEvent event, Emitter<AndroidKayitformState> emit, ) async  { emit(state.copyWith(phoneNumberEditTextController: TextEditingController(), emailEditTextController: TextEditingController(), usernameEditTextController: TextEditingController(), passwordEditTextController: TextEditingController(), confirmPasswordEditTextController: TextEditingController())); } 
+ }

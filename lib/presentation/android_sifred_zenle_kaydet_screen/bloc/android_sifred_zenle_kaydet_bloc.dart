@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:smart_watch_control/presentation/android_sifred_zenle_kaydet_screen/models/android_sifred_zenle_kaydet_model.dart';part 'android_sifred_zenle_kaydet_event.dart';part 'android_sifred_zenle_kaydet_state.dart';/// A bloc that manages the state of a AndroidSifredZenleKaydet according to the event that is dispatched to it.
+class AndroidSifredZenleKaydetBloc extends Bloc<AndroidSifredZenleKaydetEvent, AndroidSifredZenleKaydetState> {AndroidSifredZenleKaydetBloc(AndroidSifredZenleKaydetState initialState) : super(initialState) { on<AndroidSifredZenleKaydetInitialEvent>(_onInitialize); }
+
+_onInitialize(AndroidSifredZenleKaydetInitialEvent event, Emitter<AndroidSifredZenleKaydetState> emit, ) async  { emit(state.copyWith(oldPasswordController: TextEditingController(), newPasswordController: TextEditingController(), confirmNewPasswordController: TextEditingController())); } 
+ }

@@ -1,0 +1,5 @@
+import 'package:equatable/equatable.dart';import 'package:flutter/material.dart';import '/core/app_export.dart';import 'package:smart_watch_control/presentation/android_kod_g_nder_ba_ar_l_screen/models/android_kod_g_nder_ba_ar_l_model.dart';part 'android_kod_g_nder_ba_ar_l_event.dart';part 'android_kod_g_nder_ba_ar_l_state.dart';/// A bloc that manages the state of a AndroidKodGNderBaArL according to the event that is dispatched to it.
+class AndroidKodGNderBaArLBloc extends Bloc<AndroidKodGNderBaArLEvent, AndroidKodGNderBaArLState> {AndroidKodGNderBaArLBloc(AndroidKodGNderBaArLState initialState) : super(initialState) { on<AndroidKodGNderBaArLInitialEvent>(_onInitialize); }
+
+_onInitialize(AndroidKodGNderBaArLInitialEvent event, Emitter<AndroidKodGNderBaArLState> emit, ) async  { emit(state.copyWith(usernameController: TextEditingController(), enterCodeController: TextEditingController(), passwordController: TextEditingController(), confirmPasswordController: TextEditingController())); } 
+ }
